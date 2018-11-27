@@ -1,30 +1,22 @@
 package br.com.development.infogenda.controllers;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.CalendarView;
 import android.widget.Toast;
 
 import br.com.development.infogenda.R;
 
-public class Inicio extends AppCompatActivity {
-
-    private CalendarView calendario;
-    private Button btnRegistrarAvaliacoes;
-    private Button btnVisualizarAvaliacoes;
+public class RegistrarAvaliacoes extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inicio);
-        iniciarVariaveis();
-        eventosClick();
+        setContentView(R.layout.activity_registrar_avaliacoes);
+        getSupportActionBar().setTitle("Registrar Avaliações");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -46,28 +38,6 @@ public class Inicio extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    private void iniciarVariaveis(){
-        calendario = (CalendarView) findViewById(R.id.calendario);
-        btnRegistrarAvaliacoes = (Button) findViewById(R.id.btnRegistrarAvaliacoes);
-        btnVisualizarAvaliacoes = (Button) findViewById(R.id.btnVisualizarAvaliacoes);
-    }
-
-    private void eventosClick(){
-        btnRegistrarAvaliacoes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Inicio.this, RegistrarAvaliacoes.class));
-            }
-        });
-
-        btnVisualizarAvaliacoes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                alerta("Click Visualizar Funcionando");
-            }
-        });
     }
 
     private void alerta(String msg) {

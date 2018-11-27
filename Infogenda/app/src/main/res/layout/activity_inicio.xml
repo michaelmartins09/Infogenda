@@ -6,8 +6,50 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".controllers.Inicio">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Olá Mundo"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <CalendarView
+                android:elevation="5dp"
+                android:layout_gravity="center"
+                android:id="@+id/calendario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="31dp"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/btnRegistrarAvaliacoes"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rectangle_radius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registrar Avaliações"
+                    android:textColor="@color/colorWhite"
+                    android:elevation="3dp"/>
+                <Button
+                    android:id="@+id/btnVisualizarAvaliacoes"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rectangle_radius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visualizar Avaliações"
+                    android:textColor="@color/colorWhite"
+                    android:elevation="3dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
