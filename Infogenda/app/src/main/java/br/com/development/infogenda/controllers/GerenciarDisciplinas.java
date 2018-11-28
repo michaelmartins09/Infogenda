@@ -15,6 +15,10 @@ import br.com.development.infogenda.R;
 
 public class GerenciarDisciplinas extends AppCompatActivity {
 
+    private String nomeDisciplina;
+    private String nomeProfessor;
+    private String nroSala;
+
     private Button btnCancelarCadastroDisciplina;
     private Button btnSalvarDisciplina;
 
@@ -49,7 +53,7 @@ public class GerenciarDisciplinas extends AppCompatActivity {
         btnCancelarCadastroDisciplina.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(GerenciarDisciplinas.this, Inicio.class));
+                startActivity(new Intent(GerenciarDisciplinas.this, RegistrarAvaliacoes.class));
             }
         });
 
