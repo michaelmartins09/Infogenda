@@ -99,9 +99,10 @@
 
                         <Button
                             android:layout_width="wrap_content"
+                            android:id="@+id/btnAddNovaDisciplina"
                             android:layout_height="wrap_content"
                             android:background="@drawable/bg_rectangle_radius"
-                            android:text="Novo"
+                            android:text="Nova"
                             android:textColor="@color/colorWhite" />
 
                     </LinearLayout>

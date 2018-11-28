@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".controllers.RegistrarAvaliacoes"></activity>
+        <activity android:name=".controllers.GerenciarDisciplinas"></activity>
     </application>
 
 </manifest>
