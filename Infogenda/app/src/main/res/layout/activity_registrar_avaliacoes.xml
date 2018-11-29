@@ -46,12 +46,13 @@
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="15dp">
+                        android:layout_marginTop="10dp">
 
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/etNomeAvaliacao"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:hint="Nome da Notificação" />
+                            android:hint="Nome da Avaliação" />
                     </android.support.design.widget.TextInputLayout>
 
                     <!--DESCRICAO DA NOTIFICACAO-->
@@ -59,12 +60,13 @@
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="15dp">
+                        android:layout_marginTop="10dp">
 
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/etDescricaoAvaliacao"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:hint="Descrição da Notificação" />
+                            android:hint="Descrição da Avaliação" />
                     </android.support.design.widget.TextInputLayout>
 
 
@@ -91,9 +93,11 @@
                         <!--Spinner disciplinas-->
 
                         <Spinner
+                            android:id="@+id/spnDisciplinas"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"></Spinner>
+                            android:layout_weight="1">
+                        </Spinner>
 
                         <!--Botao nova disciplina-->
 
@@ -122,6 +126,7 @@
                         android:textSize="18dp" />
 
                     <RadioGroup
+                        android:id="@+id/rgroupTipoNotificacao"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -129,16 +134,19 @@
                         android:orientation="horizontal">
 
                         <RadioButton
+                            android:id="@+id/rbtnTipoLuminoso"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Luminoso" />
 
                         <RadioButton
+                            android:id="@+id/rbtnTipoSonoro"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sonoro" />
 
                         <RadioButton
+                            android:id="@+id/rbtnTipoMensagem"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Mensagem" />
@@ -150,6 +158,8 @@
                         android:layout_marginTop="10dp">
 
                         <EditText
+                            android:focusable="false"
+                            android:id="@+id/etDataAvaliacao"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -160,6 +170,8 @@
                             android:padding="10dp" />
 
                         <EditText
+                            android:focusable="false"
+                            android:id="@+id/etHorarioAvaliacao"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -168,6 +180,31 @@
                             android:drawableRight="@drawable/ic_timer_black_24dp"
                             android:drawableTint="@color/colorPrimary"
                             android:hint="Horário"
+                            android:padding="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <Switch
+                            android:id="@+id/swtLembrete"
+                            android:gravity="center"
+                            android:text="Habilitar Lembrete"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <EditText
+                            android:visibility="gone"
+                            android:id="@+id/etTempoLembrete"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/bg_rectangle_border"
+                            android:hint="Tempo"
                             android:padding="10dp" />
                     </LinearLayout>
 
@@ -181,6 +218,7 @@
                         <!--BOTAO CANCELAR-->
 
                         <Button
+                            android:id="@+id/btnCancelar"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/bg_rectangle_radius"
@@ -193,6 +231,7 @@
                         <!--BOTAO ADD-->
 
                         <Button
+                            android:id="@+id/btnSalvarAvaliacao"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
