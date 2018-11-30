@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Infogenda</string>
+    <string-array name="tempolembrete">
+        <item>05 min</item>
+        <item>10 min</item>
+        <item>30 min</item>
+        <item>1 hora</item>
+    </string-array>
+    <string-array name="disciplinas">
+        <item>Selecionar Disciplinas</item>
+    </string-array>
 </resources>

@@ -44,7 +44,7 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
     private EditText etDataAvaliacao;
     private EditText etHorarioAvaliacao;
     private Switch swtLembrete;
-    private EditText etTempoLembrete;
+    private Spinner etTempoLembrete;
 
     //Finalizar
     private Button btnSalvarAvaliacao;
@@ -104,7 +104,7 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
         etDataAvaliacao = (EditText) findViewById(R.id.etDataAvaliacao);
         etHorarioAvaliacao = (EditText) findViewById(R.id.etHorarioAvaliacao);
         swtLembrete = (Switch) findViewById(R.id.swtLembrete);
-        etTempoLembrete = (EditText) findViewById(R.id.etTempoLembrete);
+        etTempoLembrete = (Spinner) findViewById(R.id.spnTempoLembrete);
 
         //Finalizar
         btnSalvarAvaliacao = (Button) findViewById(R.id.btnSalvarAvaliacao);

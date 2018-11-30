@@ -96,7 +96,8 @@
                             android:id="@+id/spnDisciplinas"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1">
+                            android:layout_weight="1"
+                            android:entries="@array/disciplinas">
                         </Spinner>
 
                         <!--Botao nova disciplina-->
@@ -196,15 +197,14 @@
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
-                        <EditText
+                        <Spinner
                             android:visibility="gone"
-                            android:id="@+id/etTempoLembrete"
+                            android:id="@+id/spnTempoLembrete"
                             android:layout_weight="2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
-                            android:background="@drawable/bg_rectangle_border"
-                            android:hint="Tempo"
+                            android:entries="@array/tempolembrete"
                             android:padding="10dp" />
                     </LinearLayout>
 
