@@ -1,69 +1,38 @@
 package br.com.development.infogenda.controllers;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.CalendarView;
-import android.widget.Toast;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import br.com.development.infogenda.R;
+import br.com.development.infogenda.adapters.AdapterGerenciarDisciplinas;
+import br.com.development.infogenda.model.Disciplina;
 
 public class GerenciarDisciplinas extends AppCompatActivity {
-
-    private String nomeDisciplina;
-    private String nomeProfessor;
-    private String nroSala;
-
-    private Button btnCancelarCadastroDisciplina;
-    private Button btnSalvarDisciplina;
+    private ListView listViewDisciplinas;
+    private List<Disciplina> listDisciplinas = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gerenciar_disciplinas);
-        getSupportActionBar().setTitle("Adicionar Disciplina");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        iniciarVariaveis();
-        eventosClick();
+        configToolbar();
+
+        //Aqui carregar do banco os dados das disciplinas e adicionar na LIst
+        listDisciplinas.add(new Disciplina("Verificação e Validação Software", "Sam da Silva", "Lab3 e Sala 209"));
+        listDisciplinas.add(new Disciplina("Resolução de Problemas I", "Gilleane Guedes", "Lab2"));
+
+        listViewDisciplinas = (ListView) findViewById(R.id.listViewDisciplinas);
+        AdapterGerenciarDisciplinas agd = new AdapterGerenciarDisciplinas(listDisciplinas, this);
+        listViewDisciplinas.setAdapter(agd);
+
+        //Configuração da toolbar
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.menu_principal, menu);
-        return super.onCreateOptionsMenu(menu);
+    private void configToolbar() {
+        getSupportActionBar().setTitle("Gerenciar Disciplinas");
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return super.onOptionsItemSelected(item);
-    }
-
-    private void iniciarVariaveis(){
-        btnCancelarCadastroDisciplina = (Button) findViewById(R.id.btnCancelarCadastroDisciplina);
-        btnSalvarDisciplina = (Button) findViewById(R.id.btnSalvarDisciplina);
-    }
-
-    private void eventosClick(){
-        btnCancelarCadastroDisciplina.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(GerenciarDisciplinas.this, RegistrarAvaliacoes.class));
-            }
-        });
-
-        //Botão de salvar a disciplina ainda não implementado
-//        btnSalvarDisciplina.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(GerenciarDisciplinas.this, RegistrarAvaliacoes.class));
-//            }
-//        });
-    }
-
 }

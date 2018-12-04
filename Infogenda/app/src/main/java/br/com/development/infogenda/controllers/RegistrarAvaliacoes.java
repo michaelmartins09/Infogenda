@@ -11,7 +11,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -77,7 +76,7 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
                 break;
 
             case R.id.itemGerenciarDisciplina:
-                alerta("Click Item Gerenciar Disciplinas Funcionando");
+                startActivity(new Intent(RegistrarAvaliacoes.this, GerenciarDisciplinas.class));
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -116,7 +115,7 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
         btnAddNovaDisciplina.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RegistrarAvaliacoes.this, GerenciarDisciplinas.class));
+                startActivity(new Intent(RegistrarAvaliacoes.this, RegistrarDisciplinas.class));
             }
         });
 

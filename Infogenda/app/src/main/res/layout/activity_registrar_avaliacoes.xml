@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".controllers.RegistrarAvaliacoes">
+    tools:context=".controllers.RegistrarAvaliacoes"
+    android:background="#e7e7e7">
 
     <ScrollView
         android:layout_width="match_parent"

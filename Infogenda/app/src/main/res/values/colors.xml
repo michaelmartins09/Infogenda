@@ -7,4 +7,5 @@
     <color name="colorCancel">#de5353</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorEdit">#c6771d</color>
 </resources>

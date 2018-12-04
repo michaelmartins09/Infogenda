@@ -42,7 +42,7 @@ public class Inicio extends AppCompatActivity {
                 break;
 
             case R.id.itemGerenciarDisciplina:
-                alerta("Click Item Gerenciar Disciplinas Funcionando");
+                startActivity(new Intent(Inicio.this, GerenciarDisciplinas.class));
                 break;
         }
         return super.onOptionsItemSelected(item);
