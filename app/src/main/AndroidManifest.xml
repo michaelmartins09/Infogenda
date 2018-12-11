@@ -21,7 +21,8 @@
         <activity android:name=".controllers.RegistrarAvaliacoes" />
         <activity android:name=".controllers.RegistrarDisciplinas" />
         <activity android:name=".controllers.GerenciarDisciplinas" />
-        <activity android:name=".controllers.Configuracoes"></activity>
+        <activity android:name=".controllers.Configuracoes" />
+        <activity android:name=".controllers.VisualizarAvaliacoes"></activity>
     </application>
 
 </manifest>

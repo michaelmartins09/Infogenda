@@ -65,7 +65,7 @@ public class Inicio extends AppCompatActivity {
         btnVisualizarAvaliacoes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                alerta("Click Visualizar Funcionando");
+                startActivity(new Intent(Inicio.this, VisualizarAvaliacoes.class));
             }
         });
     }
