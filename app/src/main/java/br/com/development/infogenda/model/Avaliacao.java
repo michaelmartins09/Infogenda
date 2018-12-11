@@ -12,16 +12,19 @@ public class Avaliacao {
     private Date horarioNotificacao;
     private int tempLembrete;
 
-    public Avaliacao(String nomeAvaliacao, String descricao, Disciplina disciplina, TIPOALERTA tipoAlerta, Date dataNotificacao, Date horarioNotificacao) {
+    public Avaliacao(int idAvaliacao, String nomeAvaliacao, String descricao, Disciplina disciplina, TIPOALERTA tipoAlerta, Date dataNotificacao, Date horarioNotificacao, int tempLembrete) {
+        this.idAvaliacao = idAvaliacao;
         this.nomeAvaliacao = nomeAvaliacao;
         this.descricao = descricao;
         this.disciplina = disciplina;
         this.tipoAlerta = tipoAlerta;
         this.dataNotificacao = dataNotificacao;
         this.horarioNotificacao = horarioNotificacao;
+        this.tempLembrete = tempLembrete;
     }
 
     public Avaliacao(String nomeAvaliacao, String descricao, Disciplina disciplina, TIPOALERTA tipoAlerta, Date dataNotificacao, Date horarioNotificacao, int tempLembrete) {
+        idAvaliacao = -1;
         this.nomeAvaliacao = nomeAvaliacao;
         this.descricao = descricao;
         this.disciplina = disciplina;

@@ -6,7 +6,15 @@ public class Disciplina {
     private String nomeProfessor;
     private String infoSala;
 
+    public Disciplina(int idDisciplina, String nomeDisciplina, String nomeProfessor, String infoSala) {
+        this.idDisciplina = idDisciplina;
+        this.nomeDisciplina = nomeDisciplina;
+        this.nomeProfessor = nomeProfessor;
+        this.infoSala = infoSala;
+    }
+
     public Disciplina(String nomeDisciplina, String nomeProfessor, String infoSala) {
+        idDisciplina = -1;
         this.nomeDisciplina = nomeDisciplina;
         this.nomeProfessor = nomeProfessor;
         this.infoSala = infoSala;

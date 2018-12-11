@@ -84,16 +84,18 @@ public class DatabaseController {
 
     public List<Disciplina> carregarDisciplinas() {
         List<Disciplina> list = new ArrayList<>();
-        Cursor cu = cursorConsulta("disciplina");
+        Cursor cursor = cursorConsulta("disciplina");
 
-        cu.moveToFirst();
+        cursor.moveToFirst();
 
-        while (cu.moveToNext() && !cu.isNull(cu.getColumnIndex("nomeDisciplina"))) {
+        while (cursor.moveToNext() && !cursor.isNull(cursor.getColumnIndex("nomeDisciplina"))) {
             list.add(
-                    new Disciplina(cu.getString(cu.getColumnIndex("nomeDisciplina")),
-                            cu.getString(cu.getColumnIndex("nomeProfessor")),
-                            cu.getString(cu.getColumnIndex("infor_sala"))));
-            cu.moveToNext();
+                    new Disciplina(
+                            cursor.getInt(1),
+                            cursor.getString(cursor.getColumnIndex("nomeDisciplina")),
+                            cursor.getString(cursor.getColumnIndex("nomeProfessor")),
+                            cursor.getString(cursor.getColumnIndex("infor_sala"))));
+            cursor.moveToNext();
         }
         database.close();
         return list;
@@ -116,12 +118,12 @@ public class DatabaseController {
 
     public int getIdDisciplina(String nomeDisciplina){
         int response;
-        String sql = "SELECT rowid, * FROM disciplina WHERE nomeDisciplina = '" + nomeDisciplina + "'";
-        database = bancocriado.getReadableDatabase();
-        Cursor cursor = database.rawQuery(sql,null);
-        System.out.println(cursor.getString(cursor.getColumnIndex("nomeDisciplina")));
-        response = 0;
-        database.close();
+            String sql = "SELECT * FROM disciplina WHERE nomeDisciplina = '" + nomeDisciplina + "'";
+            database = bancocriado.getReadableDatabase();
+            Cursor cursor = database.rawQuery(sql,null);
+            System.out.println(cursor.getString(cursor.getColumnIndex("nomeDisciplina")));
+            response = 0;
+            database.close();
         return response;
     }
 }
