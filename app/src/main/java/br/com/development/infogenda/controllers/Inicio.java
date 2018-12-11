@@ -38,7 +38,7 @@ public class Inicio extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.itemConfiguracoes:
-                alerta("Click Item Configurações Funcionando");
+                startActivity(new Intent(Inicio.this, Configuracoes.class));
                 break;
 
             case R.id.itemGerenciarDisciplina:

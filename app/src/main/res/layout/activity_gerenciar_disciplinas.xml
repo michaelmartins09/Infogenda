@@ -14,7 +14,21 @@
         android:layout_margin="5dp"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/btnAddNovaDisciplina"
+            android:layout_margin="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/bg_rectangle_radius"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_add_black_24dp"
+            android:text="adicionar"/>
+
         <ListView
+            android:visibility="gone"
             android:padding="5dp"
             android:id="@+id/listViewDisciplinas"
             android:layout_width="match_parent"
@@ -22,5 +36,15 @@
             android:dividerHeight="10dp"
             android:divider="#00ffffff">
         </ListView>
+
+        <TextView
+            android:visibility="gone"
+            android:gravity="center"
+            android:id="@+id/statusListDisciplinas"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25sp"/>
     </LinearLayout>
 </LinearLayout>

@@ -94,6 +94,10 @@
                         <!--Spinner disciplinas-->
 
                         <Spinner
+
+                            android:textAlignment="center"
+                            android:foregroundGravity="center"
+                            android:elevation="3dp"
                             android:id="@+id/spnDisciplinas"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"

@@ -18,9 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controllers.RegistrarAvaliacoes"></activity>
-        <activity android:name=".controllers.RegistrarDisciplinas"></activity>
-        <activity android:name=".controllers.GerenciarDisciplinas"></activity>
+        <activity android:name=".controllers.RegistrarAvaliacoes" />
+        <activity android:name=".controllers.RegistrarDisciplinas" />
+        <activity android:name=".controllers.GerenciarDisciplinas" />
+        <activity android:name=".controllers.Configuracoes"></activity>
     </application>
 
 </manifest>

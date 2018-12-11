@@ -3,6 +3,7 @@ package br.com.development.infogenda.controllers;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -21,9 +23,13 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 import br.com.development.infogenda.R;
+import br.com.development.infogenda.database.DatabaseController;
+import br.com.development.infogenda.model.Disciplina;
 
 public class RegistrarAvaliacoes extends AppCompatActivity {
 
@@ -55,8 +61,11 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
         setContentView(R.layout.activity_registrar_avaliacoes);
         getSupportActionBar().setTitle("Registrar Avaliações");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //Carregando variáveis
         iniciarVariaveis();
+        //Método de evento Touch
         eventosClick();
+        //COnfiguração da data e horário como Dialog
         configurarDataPicker();
         configurarTimePicker();
     }
@@ -72,7 +81,7 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.itemConfiguracoes:
-                alerta("Click Item Configurações Funcionando");
+                startActivity(new Intent(RegistrarAvaliacoes.this, Configuracoes.class));
                 break;
 
             case R.id.itemGerenciarDisciplina:
@@ -92,7 +101,6 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
         etDescricaoAvaliacao = (TextInputEditText) findViewById(R.id.etDescricaoAvaliacao);
 
         //Disciplina
-        spnDisciplinas = (Spinner) findViewById(R.id.spnDisciplinas);
         btnAddNovaDisciplina = (Button) findViewById(R.id.btnAddNovaDisciplina);
 
         //Notificação
@@ -127,6 +135,21 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
                 } else {
                     etTempoLembrete.setVisibility(View.GONE);
                 }
+            }
+        });
+
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        btnSalvarAvaliacao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseController crud = new DatabaseController(getApplicationContext());
+                alerta("ID: " + crud.getIdDisciplina("gg"));
             }
         });
     }
@@ -178,5 +201,31 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
                 horario.show();
             }
         });
+    }
+
+    private void prepararSpinner(){
+        DatabaseController crud = new DatabaseController(getApplicationContext());
+
+        if (spnDisciplinas == null){
+            spnDisciplinas = (Spinner) findViewById(R.id.spnDisciplinas);
+        }
+        List<Disciplina> arrayList = crud.carregarDisciplinas();
+
+        ArrayAdapter<Disciplina> arrayAdapter = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, arrayList);
+        arrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        spnDisciplinas.setAdapter(arrayAdapter);
+
+    }
+
+    @Override
+    protected void onStart() {
+        prepararSpinner();
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        prepararSpinner();
+        super.onResume();
     }
 }

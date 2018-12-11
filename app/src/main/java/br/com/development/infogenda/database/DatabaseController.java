@@ -2,8 +2,13 @@ package br.com.development.infogenda.database;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
+
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.List;
 
 import br.com.development.infogenda.model.Avaliacao;
 import br.com.development.infogenda.model.Disciplina;
@@ -20,7 +25,7 @@ public class DatabaseController {
     }
 
     //Método para inserir Avaliações no bano de dados
-    public String inserirAvaliacao(Avaliacao avaliacao){
+    public String inserirAvaliacao(Avaliacao avaliacao) {
         ContentValues contentValues;
         long response;
 
@@ -32,40 +37,91 @@ public class DatabaseController {
         contentValues.put("date", "01/01/2019");
         contentValues.put("tempo_lembrete", 5);
 
-        response = database.insert(this.bancocriado.getDatabaseName(),null, contentValues);
+        response = database.insert(this.bancocriado.getDatabaseName(), null, contentValues);
         database.close();
 
-        if (response == -1){
+        if (response == -1) {
             Log.i("DEBUG/DATABASE", "Erro registrar avaliação");
             return "Erro registrar avaliação";
-        }else{
+        } else {
             Log.i("DEBUG/DATABASE", "Avaliação registrada com sucesso");
             return "Avaliação registrada com sucesso";
         }
     }
 
     //Método para inserir Disciplinas no bano de dados
-    public String inserirDisciplina(Disciplina disciplina){
-        ContentValues contentValues;
-        long response;
+    public String inserirDisciplina(Disciplina disciplina) {
+        try {
+            ContentValues contentValues;
+            long response;
 
-        database = bancocriado.getWritableDatabase();
-        contentValues = new ContentValues();
-        contentValues.put("nome", disciplina.getNomeDisciplina());
-        contentValues.put("professor", disciplina.getNomeProfessor());
-        contentValues.put("infor_sala", disciplina.getInfoSala());
+            database = bancocriado.getWritableDatabase();
+            contentValues = new ContentValues();
+            contentValues.put("nomeDisciplina", disciplina.getNomeDisciplina());
+            contentValues.put("nomeProfessor", disciplina.getNomeProfessor());
+            contentValues.put("infor_sala", disciplina.getInfoSala());
 
-        response = database.insert(this.bancocriado.getDatabaseName(),null, contentValues);
-        database.close();
+            response = database.insert("disciplina", null, contentValues);
+            database.close();
 
-        if (response == -1){
-            Log.i("DEBUG/DATABASE", "Erro ao inserir disciplina");
-            return "Erro ao inserir disciplina";
-        }else{
-            Log.i("DEBUG/DATABASE", "Disciplina registrada com sucesso");
-            return "Disciplina registrada com sucesso";
+            if (response == -1) {
+                Log.i("DEBUG/DATABASE", "Erro ao inserir disciplina");
+                return "Erro ao inserir disciplina";
+            } else {
+                Log.i("DEBUG/DATABASE", "Disciplina registrada com sucesso");
+                return "Disciplina registrada com sucesso";
+            }
+        } catch (Exception e) {
+            return "DEBUG/DATABASE: " + e.getMessage();
         }
     }
 
+    public Cursor cursorConsulta(String tabela) {
+        database = bancocriado.getReadableDatabase();
+        Cursor cu = database.rawQuery("select ALL _id,* from " + tabela, null);
+        return cu;
+    }
 
+    public List<Disciplina> carregarDisciplinas() {
+        List<Disciplina> list = new ArrayList<>();
+        Cursor cu = cursorConsulta("disciplina");
+
+        cu.moveToFirst();
+
+        while (cu.moveToNext() && !cu.isNull(cu.getColumnIndex("nomeDisciplina"))) {
+            list.add(
+                    new Disciplina(cu.getString(cu.getColumnIndex("nomeDisciplina")),
+                            cu.getString(cu.getColumnIndex("nomeProfessor")),
+                            cu.getString(cu.getColumnIndex("infor_sala"))));
+            cu.moveToNext();
+        }
+        database.close();
+        return list;
+    }
+
+    public String limparTabela(String tabela) {
+        String response;
+        try {
+            String where = "_id IS NOT NULL";
+            database = bancocriado.getReadableDatabase();
+            database.delete(tabela, where, null);
+            database.close();
+            response = "Tabela limpa com sucesso";
+            return response;
+        } catch (Exception e) {
+            response = "Erro: " + e.getMessage();
+            return response;
+        }
+    }
+
+    public int getIdDisciplina(String nomeDisciplina){
+        int response;
+        String sql = "SELECT rowid, * FROM disciplina WHERE nomeDisciplina = '" + nomeDisciplina + "'";
+        database = bancocriado.getReadableDatabase();
+        Cursor cursor = database.rawQuery(sql,null);
+        System.out.println(cursor.getString(cursor.getColumnIndex("nomeDisciplina")));
+        response = 0;
+        database.close();
+        return response;
+    }
 }

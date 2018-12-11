@@ -1,6 +1,7 @@
 package br.com.development.infogenda.model;
 
 public class Disciplina {
+    private int idDisciplina;
     private String nomeDisciplina;
     private String nomeProfessor;
     private String infoSala;
@@ -9,6 +10,14 @@ public class Disciplina {
         this.nomeDisciplina = nomeDisciplina;
         this.nomeProfessor = nomeProfessor;
         this.infoSala = infoSala;
+    }
+
+    public int getIdDisciplina() {
+        return idDisciplina;
+    }
+
+    public void setIdDisciplina(int idDisciplina) {
+        this.idDisciplina = idDisciplina;
     }
 
     public String getNomeDisciplina() {
@@ -37,10 +46,6 @@ public class Disciplina {
 
     @Override
     public String toString() {
-        return "Disciplina{\n" +
-                "Disciplina: " + nomeDisciplina + "\n" +
-                "Professor: " + nomeProfessor + "\n" +
-                "Sala: " + infoSala + "\n" +
-                "}";
+        return this.getNomeDisciplina() + " - " + this.getNomeProfessor();
     }
 }
