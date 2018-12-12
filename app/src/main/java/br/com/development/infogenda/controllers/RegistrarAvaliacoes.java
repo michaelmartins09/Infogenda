@@ -29,6 +29,7 @@ import java.util.List;
 
 import br.com.development.infogenda.R;
 import br.com.development.infogenda.database.DatabaseController;
+import br.com.development.infogenda.model.Avaliacao;
 import br.com.development.infogenda.model.Disciplina;
 
 public class RegistrarAvaliacoes extends AppCompatActivity {
@@ -91,6 +92,18 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onStart() {
+        prepararSpinner();
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        prepararSpinner();
+        super.onResume();
+    }
+
     private void alerta(String msg) {
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
     }
@@ -148,8 +161,9 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
         btnSalvarAvaliacao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseController crud = new DatabaseController(getApplicationContext());
-                alerta("ID: " + crud.getIdDisciplina("gg"));
+                if (validarCampos()){
+                    salvarAvaliacao();
+                }
             }
         });
     }
@@ -209,23 +223,66 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
         if (spnDisciplinas == null){
             spnDisciplinas = (Spinner) findViewById(R.id.spnDisciplinas);
         }
-        List<Disciplina> arrayList = crud.carregarDisciplinas();
 
-        ArrayAdapter<Disciplina> arrayAdapter = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, arrayList);
+        ArrayAdapter<Disciplina> arrayAdapter =
+                new ArrayAdapter<>(this,
+                R.layout.support_simple_spinner_dropdown_item,
+                crud.carregarDisciplinas());
         arrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         spnDisciplinas.setAdapter(arrayAdapter);
-
     }
 
-    @Override
-    protected void onStart() {
-        prepararSpinner();
-        super.onStart();
+    private boolean validarCampos() {
+        if (etNomeAvaliacao.getText().toString().trim().equals("")) {
+            etNomeAvaliacao.setError("Informe o nome da Avaliação");
+            return false;
+        }
+        if (etDescricaoAvaliacao.getText().toString().trim().equals("")) {
+            etDescricaoAvaliacao.setError("Informe descrição da Avaliação");
+            return false;
+        }
+        if ( spnDisciplinas.getSelectedItem().toString().equals("") ) {
+            alerta("Selecione ou cadastre uma disciplina para continuar");
+            return false;
+        }
+        if (!rbtnTipoSonoro.isChecked() && !rbtnTipoMensagem.isChecked() && !rbtnTipoSonoro.isChecked()){
+            alerta("Selecione um tipo de alerta");
+            return false;
+        }
+        if (etDataAvaliacao.getText().toString().equals("")){
+            alerta("Escolha uma data para a notificação");
+            return false;
+        }
+        if (etHorarioAvaliacao.getText().toString().equals("")){
+            alerta("Escolha um  horário para a notificação");
+            return false;
+        }
+        return true;
     }
 
-    @Override
-    protected void onResume() {
-        prepararSpinner();
-        super.onResume();
+    private void salvarAvaliacao(){
+        DatabaseController crud = new DatabaseController(getApplicationContext());
+        String[] disciplina = spnDisciplinas.getSelectedItem().toString().split(" - ");
+
+        int tempoNot = 0;
+
+        if (swtLembrete.isChecked()){
+            tempoNot = Integer.parseInt(etTempoLembrete.getSelectedItem().toString());
+        }
+
+        Avaliacao aval = new Avaliacao(
+            etNomeAvaliacao.getText().toString(),
+            etDescricaoAvaliacao.getText().toString(),
+                crud.getDisciplina(disciplina[0]),
+                etDataAvaliacao.getText().toString(),
+                etHorarioAvaliacao.getText().toString(),
+                tempoNot);
+
+        String response = crud.inserirAvaliacao(aval);
+        if (response.contains("Erro")){
+            alerta(response);
+        }else {
+            finish();
+        }
     }
 }

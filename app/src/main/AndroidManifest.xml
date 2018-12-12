@@ -18,11 +18,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controllers.RegistrarAvaliacoes" />
-        <activity android:name=".controllers.RegistrarDisciplinas" />
-        <activity android:name=".controllers.GerenciarDisciplinas" />
-        <activity android:name=".controllers.Configuracoes" />
-        <activity android:name=".controllers.VisualizarAvaliacoes"></activity>
+        <activity android:name=".controllers.RegistrarAvaliacoes"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".controllers.RegistrarDisciplinas"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".controllers.GerenciarDisciplinas">
+        </activity>
+        <activity android:name=".controllers.Configuracoes">
+        </activity>
+        <activity android:name=".controllers.VisualizarAvaliacoes">
+        </activity>
     </application>
 
 </manifest>

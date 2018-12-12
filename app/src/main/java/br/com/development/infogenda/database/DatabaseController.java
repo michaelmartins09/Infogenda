@@ -83,13 +83,13 @@ public class DatabaseController {
     }
 
     public List<Disciplina> carregarDisciplinas() {
-        List<Disciplina> list = new ArrayList<>();
+        List<Disciplina> listDisciplinas = new ArrayList<>();
         Cursor cursor = cursorConsulta("disciplina");
 
         cursor.moveToFirst();
 
         while (cursor.moveToNext() && !cursor.isNull(cursor.getColumnIndex("nomeDisciplina"))) {
-            list.add(
+            listDisciplinas.add(
                     new Disciplina(
                             cursor.getInt(1),
                             cursor.getString(cursor.getColumnIndex("nomeDisciplina")),
@@ -98,7 +98,7 @@ public class DatabaseController {
             cursor.moveToNext();
         }
         database.close();
-        return list;
+        return listDisciplinas;
     }
 
     public String limparTabela(String tabela) {
@@ -117,13 +117,25 @@ public class DatabaseController {
     }
 
     public int getIdDisciplina(String nomeDisciplina){
-        int response;
-            String sql = "SELECT * FROM disciplina WHERE nomeDisciplina = '" + nomeDisciplina + "'";
-            database = bancocriado.getReadableDatabase();
-            Cursor cursor = database.rawQuery(sql,null);
-            System.out.println(cursor.getString(cursor.getColumnIndex("nomeDisciplina")));
-            response = 0;
-            database.close();
+        int response = 0;
+        List<Disciplina> temp = carregarDisciplinas();
+        for (Disciplina nome: temp) {
+            if (nome.getNomeDisciplina().equals(nomeDisciplina)){
+                response = nome.getIdDisciplina();
+            }
+        }
+        return response;
+    }
+
+    public Disciplina getDisciplina(String nomeDisciplina){
+        Disciplina response = null;
+
+        List<Disciplina> temp = carregarDisciplinas();
+        for (Disciplina nome: temp) {
+            if (nome.getNomeDisciplina().equals(nomeDisciplina)){
+                response = nome;
+            }
+        }
         return response;
     }
 }

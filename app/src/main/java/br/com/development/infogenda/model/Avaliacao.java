@@ -7,28 +7,24 @@ public class Avaliacao {
     private String nomeAvaliacao;
     private String descricao;
     private Disciplina disciplina;
-    private TIPOALERTA tipoAlerta;
-    private Date dataNotificacao;
-    private Date horarioNotificacao;
+    private String dataNotificacao;
+    private String horarioNotificacao;
     private int tempLembrete;
 
-    public Avaliacao(int idAvaliacao, String nomeAvaliacao, String descricao, Disciplina disciplina, TIPOALERTA tipoAlerta, Date dataNotificacao, Date horarioNotificacao, int tempLembrete) {
+    public Avaliacao(int idAvaliacao, String nomeAvaliacao, String descricao, Disciplina disciplina, String dataNotificacao, String horarioNotificacao, int tempLembrete) {
         this.idAvaliacao = idAvaliacao;
         this.nomeAvaliacao = nomeAvaliacao;
         this.descricao = descricao;
         this.disciplina = disciplina;
-        this.tipoAlerta = tipoAlerta;
         this.dataNotificacao = dataNotificacao;
         this.horarioNotificacao = horarioNotificacao;
         this.tempLembrete = tempLembrete;
     }
 
-    public Avaliacao(String nomeAvaliacao, String descricao, Disciplina disciplina, TIPOALERTA tipoAlerta, Date dataNotificacao, Date horarioNotificacao, int tempLembrete) {
-        idAvaliacao = -1;
+    public Avaliacao(String nomeAvaliacao, String descricao, Disciplina disciplina, String dataNotificacao, String horarioNotificacao, int tempLembrete) {
         this.nomeAvaliacao = nomeAvaliacao;
         this.descricao = descricao;
         this.disciplina = disciplina;
-        this.tipoAlerta = tipoAlerta;
         this.dataNotificacao = dataNotificacao;
         this.horarioNotificacao = horarioNotificacao;
         this.tempLembrete = tempLembrete;
@@ -66,27 +62,19 @@ public class Avaliacao {
         this.disciplina = disciplina;
     }
 
-    public TIPOALERTA getTipoAlerta() {
-        return tipoAlerta;
-    }
-
-    public void setTipoAlerta(TIPOALERTA tipoAlerta) {
-        this.tipoAlerta = tipoAlerta;
-    }
-
-    public Date getDataNotificacao() {
+    public String getDataNotificacao() {
         return dataNotificacao;
     }
 
-    public void setDataNotificacao(Date dataNotificacao) {
+    public void setDataNotificacao(String dataNotificacao) {
         this.dataNotificacao = dataNotificacao;
     }
 
-    public Date getHorarioNotificacao() {
+    public String getHorarioNotificacao() {
         return horarioNotificacao;
     }
 
-    public void setHorarioNotificacao(Date horarioNotificacao) {
+    public void setHorarioNotificacao(String horarioNotificacao) {
         this.horarioNotificacao = horarioNotificacao;
     }
 

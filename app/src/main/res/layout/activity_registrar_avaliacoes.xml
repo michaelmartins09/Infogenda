@@ -94,7 +94,6 @@
                         <!--Spinner disciplinas-->
 
                         <Spinner
-
                             android:textAlignment="center"
                             android:foregroundGravity="center"
                             android:elevation="3dp"
@@ -102,7 +101,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:entries="@array/disciplinas">
+                            android:entries="@array/disciplinas"
+                            android:dropDownWidth="match_parent">
                         </Spinner>
 
                         <!--Botao nova disciplina-->
