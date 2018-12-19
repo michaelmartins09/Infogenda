@@ -59,21 +59,6 @@ public class GerenciarDisciplinas extends AppCompatActivity {
         btnAddNovaDisciplina = (Button) findViewById(R.id.btnAddNovaDisciplina);
     }
 
-    private void carregarListCursor() {
-        DatabaseController crud = new DatabaseController(getApplicationContext());
-        Cursor cu = crud.cursorConsulta("disciplina");
-        if (cu != null && cu.getCount() >= 1) {
-            listViewDisciplinas.setVisibility(View.VISIBLE);
-            statusListDisciplinas.setVisibility(View.GONE);
-            CursorAdapterDisciplinas cad = new CursorAdapterDisciplinas(getApplicationContext(), cu);
-            listViewDisciplinas.setAdapter(cad);
-        } else {
-            listViewDisciplinas.setVisibility(View.GONE);
-            statusListDisciplinas.setVisibility(View.VISIBLE);
-            statusListDisciplinas.setText("Disciplinas não encontradas");
-        }
-    }
-
     private void carregarListObject() {
         DatabaseController crud = new DatabaseController(getApplicationContext());
         listDisciplinas = crud.carregarDisciplinas();

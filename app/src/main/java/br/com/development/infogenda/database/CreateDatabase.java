@@ -46,11 +46,4 @@ public class CreateDatabase extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public static String getNomeBanco() {
-        return NOME_BANCO;
-    }
-
-    public static int getVERSAO() {
-        return VERSAO;
-    }
 }

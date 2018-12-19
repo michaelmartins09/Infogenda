@@ -1,7 +1,5 @@
 package br.com.development.infogenda.model;
 
-import java.util.Date;
-
 public class Avaliacao {
     private int idAvaliacao;
     private String nomeAvaliacao;
@@ -9,26 +7,26 @@ public class Avaliacao {
     private Disciplina disciplina;
     private String dataNotificacao;
     private String horarioNotificacao;
-    private String tipoAleta;
+    private String tipoalerta;
     private int tempLembrete;
 
-    public Avaliacao(int idAvaliacao, String nomeAvaliacao, String descricao, Disciplina disciplina, String dataNotificacao, String horarioNotificacao, String tipoAleta, int tempLembrete) {
+    public Avaliacao(int idAvaliacao, String nomeAvaliacao, String descricao, Disciplina disciplina, String dataNotificacao, String horarioNotificacao, String tipoalerta, int tempLembrete) {
         this.idAvaliacao = idAvaliacao;
         this.nomeAvaliacao = nomeAvaliacao;
         this.descricao = descricao;
         this.disciplina = disciplina;
         this.dataNotificacao = dataNotificacao;
         this.horarioNotificacao = horarioNotificacao;
-        this.tipoAleta = tipoAleta;
+        this.tipoalerta = tipoalerta;
         this.tempLembrete = tempLembrete;
     }
-    public Avaliacao(String nomeAvaliacao, String descricao, Disciplina disciplina, String dataNotificacao, String horarioNotificacao, String tipoAleta, int tempLembrete) {
+    public Avaliacao(String nomeAvaliacao, String descricao, Disciplina disciplina, String dataNotificacao, String horarioNotificacao, String tipoalerta, int tempLembrete) {
         this.nomeAvaliacao = nomeAvaliacao;
         this.descricao = descricao;
         this.disciplina = disciplina;
         this.dataNotificacao = dataNotificacao;
         this.horarioNotificacao = horarioNotificacao;
-        this.tipoAleta = tipoAleta;
+        this.tipoalerta = tipoalerta;
         this.tempLembrete = tempLembrete;
     }
 
@@ -80,12 +78,12 @@ public class Avaliacao {
         this.horarioNotificacao = horarioNotificacao;
     }
 
-    public String getTipoAleta() {
-        return tipoAleta;
+    public String getTipoalerta() {
+        return tipoalerta;
     }
 
-    public void setTipoAleta(String tipoAleta) {
-        this.tipoAleta = tipoAleta;
+    public void setTipoalerta(String tipoalerta) {
+        this.tipoalerta = tipoalerta;
     }
 
     public int getTempLembrete() {

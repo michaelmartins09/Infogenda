@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +35,7 @@ public class DatabaseController {
         contentValues.put("idDisciplina", avaliacao.getDisciplina().getIdDisciplina());
         contentValues.put("dataNotificacao", avaliacao.getDataNotificacao());
         contentValues.put("horarioNotificacao", avaliacao.getHorarioNotificacao());
-        contentValues.put("tipoalerta", avaliacao.getTipoAleta());
+        contentValues.put("tipoalerta", avaliacao.getTipoalerta());
         contentValues.put("tempolembrete", 5);
 
         response = database.insert("avaliacao", null, contentValues);
@@ -148,14 +147,14 @@ public class DatabaseController {
 
         cursor.moveToFirst();
 
-        while (cursor.moveToNext() && !cursor.isNull(cursor.getColumnIndex("nomeAvaliacao"))) {
+        while (cursor.moveToNext() && !cursor.isNull(cursor.getColumnIndex("nome"))) {
             listAvaliacoes.add(
                     new Avaliacao(
                             cursor.getInt(1),
                             cursor.getString(cursor.getColumnIndex("nome")),
                             cursor.getString(cursor.getColumnIndex("descricao")),
                             getDisciplinaById(cursor.getString(cursor.getColumnIndex("idDisciplina"))),
-                            cursor.getString(cursor.getColumnIndex("datanotificacao")),
+                            cursor.getString(cursor.getColumnIndex("dataNotificacao")),
                             cursor.getString(cursor.getColumnIndex("horarioNotificacao")),
                             cursor.getString(cursor.getColumnIndex("tipoalerta")),
                             cursor.getInt(cursor.getColumnIndex("tempolembrete"))));

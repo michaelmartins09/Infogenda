@@ -14,12 +14,23 @@
         android:orientation="vertical">
 
         <ListView
+            android:visibility="gone"
             android:padding="5dp"
-            android:id="@+id/listViewDisciplinas"
+            android:id="@+id/listViewAvaliacoes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:dividerHeight="10dp"
             android:divider="#00ffffff">
         </ListView>
+
+        <TextView
+            android:visibility="gone"
+            android:gravity="center"
+            android:id="@+id/statusListAvaliacoes"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25sp"/>
     </LinearLayout>
 </LinearLayout>

@@ -22,8 +22,6 @@ public class AdapterGerenciarDisciplinas extends BaseAdapter {
     private TextView tvNomeDisciplina;
     private TextView tvNomeProfessorDisciplina;
     private TextView tvInforSalaDisciplina;
-    private ImageView btnRemoverDisciplina;
-    private ImageView btnAlterarDisciplina;
 
     public AdapterGerenciarDisciplinas(List<Disciplina> listDisciplinas, Activity activity) {
         this.listDisciplinas = listDisciplinas;
@@ -61,29 +59,8 @@ public class AdapterGerenciarDisciplinas extends BaseAdapter {
 
             tvInforSalaDisciplina = (TextView) view.findViewById(R.id.tvInforSalaDisciplina);
             tvInforSalaDisciplina.setText(disc.getInfoSala());
-
-            btnAlterarDisciplina = (ImageView) view.findViewById(R.id.btnAlterarDisciplina);
-            btnAlterarDisciplina.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    alerta("Click Alterar Disciplina Funcionando");
-                }
-            });
-
-            btnRemoverDisciplina = (ImageView) view.findViewById(R.id.btnRemoverDisciplina);
-            btnRemoverDisciplina.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    alerta("Click Remover Disciplina Funcionando");
-                }
-            });
-
         }
 
         return view;
-    }
-
-    private void alerta(String msg){
-        Toast.makeText(activity.getApplicationContext(), msg, Toast.LENGTH_LONG).show();
     }
 }

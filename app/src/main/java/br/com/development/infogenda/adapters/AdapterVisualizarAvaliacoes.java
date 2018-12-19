@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,11 +12,15 @@ import java.util.List;
 
 import br.com.development.infogenda.R;
 import br.com.development.infogenda.model.Avaliacao;
-import br.com.development.infogenda.model.Disciplina;
 
 public class AdapterVisualizarAvaliacoes extends BaseAdapter {
     private Activity activity;
     private List<Avaliacao> listAvaliacao = new ArrayList<>();
+
+    //Dados da ListView
+    private TextView tvNomeAvaliacao;
+    private TextView tvDataAvaliacao;
+    private TextView tvTipoAlerta;
 
     public AdapterVisualizarAvaliacoes(List<Avaliacao> listAvaliacao, Activity activity) {
         this.listAvaliacao = listAvaliacao;
@@ -46,7 +49,16 @@ public class AdapterVisualizarAvaliacoes extends BaseAdapter {
         View view = activity.getLayoutInflater().inflate(R.layout.adapter_visualizar_avaliacoes, parent, false);
 
         if (aval != null) {
-            //Implementar aqui
+            tvNomeAvaliacao = (TextView) view.findViewById(R.id.tvNomeAvaliacao);
+            tvNomeAvaliacao.setText(aval.getNomeAvaliacao());
+
+            tvDataAvaliacao = (TextView) view.findViewById(R.id.tvDataAvaliacao);
+            tvDataAvaliacao.setText(aval.getDataNotificacao());
+
+            tvTipoAlerta = (TextView) view.findViewById(R.id.tvTipoAlerta);
+            tvTipoAlerta.setText(aval.getTipoalerta());
+
+
         }
 
         return view;
