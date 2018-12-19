@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\.android\build-cache\b6ec18d8dbf06062730d2c4e849fa5a454af4467\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e9cce31f6e1291bd802538762196003387c613e7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\.android\build-cache\88a85cdc96ddb2a18ee393727c3a92a99d69fc3a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f86f751fee487b67d9d918e02c034e44a3bdd407\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\.android\build-cache\1db08d4f5e82e2d2d376a62f205c3c063e74f6ca\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="541a2ad68dc68aa49795821f8280b7624e6a0c9b">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4f8024ba8560c77058739116aa3546fce4458f3c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ecca5c841a011a3df56b701dbd9e6ea7cda9d0a5">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_e2e9ec260e88cc79df3ae70989e68eb630369fc5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha7\constraint-layout-solver-1.0.0-alpha7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="439eeb5ffd54cbd18db0a6aea471e8356f19fc36">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0-alpha7_bb17d80f493440c907ab98e56b9c7cb30461485b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-26.0.0-alpha1_cc455d642411cde8ccecbf0c3145ee64b1fa9bbd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\.android\build-cache\bdc7f32b6032b1b5a40718297b4487fda6efad84\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3b8d8611bc41a828ee4b186c25198b6b03a91d5d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\.android\build-cache\29f35e5d40ecf5203a6be6e672cedcc1b59e94d6\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_069b022f97e99a30e88dafcb0caeb19006c3754b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\.android\build-cache\027ec672d82c286e204ddd33c7dc1d306cb2158e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ede20e4b81612ad031f51d78d003ef8219705e6b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\.android\build-cache\e8fd523fbdd85d6b52b1144fb7783e2756d28bf6\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d76587bce69858cc7da1625363826bee381ccb95\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\.android\build-cache\261e525bfc738466a228e131c966504f0060f9b0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0714be497e6dadc2718f9ff215a816f06474faad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\.android\build-cache\e0917b590c472457aeeee65c893a37b794cdc8e4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4a42020b5aec077df54c33623bf256c27c1284d7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\.android\build-cache\11e8559f4cfc9d75c56e22b9b40f7286329784b9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c421dbd15faf5e318e56dd1acdb6fa75a5597f4b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\.android\build-cache\3e659c044c2898e507554b88e2af9fbe829f8942\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_683583476e4f47a1a6273023c1f8984d0c5a2264\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_aac212851c1d66ec7b66c70e99664bd168d0aaae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\.android\build-cache\5eeba67574961bae660ef69fc6bc3b1ab45ad605\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d25f7653b964e12ed2c0604415ac6c45fac30f54\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Michael Martins\.android\build-cache\dfa1c1bdbe5c6150feba45fb64174b1993eaa472\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e9eabe4a885d665a0aa366ef842b20c28c12d96b\classes.dex" />
+    </item>
+
+</items>

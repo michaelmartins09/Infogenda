@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".controller.RegistrarAvaliacao"
+    android:background="@color/colorWhite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <!--INFORMAÇÕES-->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rectangle_radius"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Informações"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18dp" />
+
+                    <!--NOME DA NOTIFICAÇÃO-->
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/etNomeAvaliacao"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Nome da Avaliação" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!--DESCRICAO DA NOTIFICACAO-->
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/etDescricaoAvaliacao"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Descrição da Avaliação" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <!--DISCIPLINA-->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_rectangle_radius"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Disciplina"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <!--Spinner disciplinas-->
+
+                        <Spinner
+                            android:textAlignment="center"
+                            android:foregroundGravity="center"
+                            android:elevation="3dp"
+                            android:id="@+id/spnDisciplinas"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:entries="@array/disciplinas"
+                            android:dropDownWidth="match_parent">
+                        </Spinner>
+
+                        <!--Botao nova disciplina-->
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:id="@+id/btnAddNovaDisciplina"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_rectangle_radius"
+                            android:text="Nova"
+                            android:textColor="@color/colorWhite" />
+
+                    </LinearLayout>
+
+                    <!--DISCIPLINA-->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_rectangle_radius"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Notificação"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18dp" />
+
+                    <RadioGroup
+                        android:id="@+id/rgroupTipoNotificacao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbtnTipoLuminoso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Luminoso" />
+
+                        <RadioButton
+                            android:id="@+id/rbtnTipoSonoro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sonoro" />
+
+                        <RadioButton
+                            android:id="@+id/rbtnTipoMensagem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mensagem" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <EditText
+                            android:focusable="false"
+                            android:id="@+id/etDataAvaliacao"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_rectangle_border"
+                            android:drawableRight="@drawable/ic_date_range_black_24dp"
+                            android:drawableTint="@color/colorPrimary"
+                            android:hint="Data"
+                            android:padding="10dp" />
+
+                        <EditText
+                            android:focusable="false"
+                            android:id="@+id/etHorarioAvaliacao"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_rectangle_border"
+                            android:drawableRight="@drawable/ic_timer_black_24dp"
+                            android:drawableTint="@color/colorPrimary"
+                            android:hint="Horário"
+                            android:padding="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <Switch
+                            android:id="@+id/swtLembrete"
+                            android:gravity="center"
+                            android:text="Habilitar Lembrete"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <Spinner
+                            android:visibility="gone"
+                            android:id="@+id/spnTempoLembrete"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:entries="@array/tempolembrete"
+                            android:padding="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <!--BOTAO CANCELAR-->
+
+                        <Button
+                            android:id="@+id/btnCancelar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_rectangle_radius"
+                            android:backgroundTint="@color/colorCancel"
+                            android:drawableLeft="@drawable/ic_close_black_24dp"
+                            android:padding="10dp"
+                            android:text="Cancelar"
+                            android:textColor="@color/colorWhite" />
+
+                        <!--BOTAO ADD-->
+
+                        <Button
+                            android:id="@+id/btnSalvarAvaliacao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/bg_rectangle_radius"
+                            android:backgroundTint="@color/colorAdd"
+                            android:drawableLeft="@drawable/ic_add_black_24dp"
+                            android:padding="10dp"
+                            android:text="Salvar"
+                            android:textColor="@color/colorWhite" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

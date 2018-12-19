@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:elevation="5dp">
+
+            <TextView
+                android:id="@+id/tvDataAvaliacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00/00/00 - 00:00"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tvNomeAvaliacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Avaliação de RP"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/alarm_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rectangle_radius"
+                android:backgroundTint="@color/colorAdd"
+                android:text="ON"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/alarm_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rectangle_radius"
+                android:backgroundTint="#a5a5a5"
+                android:text="OFF"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rectangle_radius"
+                android:backgroundTint="@color/colorCancel"
+                android:text="Delete"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

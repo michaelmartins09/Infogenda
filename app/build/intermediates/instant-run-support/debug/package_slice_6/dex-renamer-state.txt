@@ -1,0 +1,4 @@
+#Wed Dec 19 12:43:53 BRST 2018
+base.0=C\:\\Users\\Michael Martins\\Downloads\\Temp4\\Ghanta-master\\Ghanta-master\\Ghanta\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_6
+renamed.0=classes.dex
+file.0=C\:\\Users\\Michael Martins\\Downloads\\Temp4\\Ghanta-master\\Ghanta-master\\Ghanta\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_6\\classes.dex

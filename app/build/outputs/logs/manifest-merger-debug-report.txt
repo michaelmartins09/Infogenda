@@ -1,0 +1,147 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:2:1-46:12
+	package
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:3:5-32
+		INJECTED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:5:5-78
+	android:name
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:5:22-75
+uses-permission#android.permission.SEND_SMS
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:6:22-64
+application
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:8:5-44:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha7] C:\Users\Michael Martins\.android\build-cache\1db08d4f5e82e2d2d376a62f205c3c063e74f6ca\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\e8fd523fbdd85d6b52b1144fb7783e2756d28bf6\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\11e8559f4cfc9d75c56e22b9b40f7286329784b9\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\3e659c044c2898e507554b88e2af9fbe829f8942\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\027ec672d82c286e204ddd33c7dc1d306cb2158e\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\29f35e5d40ecf5203a6be6e672cedcc1b59e94d6\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\5eeba67574961bae660ef69fc6bc3b1ab45ad605\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\b6ec18d8dbf06062730d2c4e849fa5a454af4467\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\88a85cdc96ddb2a18ee393727c3a92a99d69fc3a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\e0917b590c472457aeeee65c893a37b794cdc8e4\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\bdc7f32b6032b1b5a40718297b4487fda6efad84\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\dfa1c1bdbe5c6150feba45fb64174b1993eaa472\output\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:11:9-41
+	android:supportsRtl
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:13:9-35
+	android:roundIcon
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:12:9-54
+	android:allowBackup
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:9:9-35
+	android:icon
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:10:9-43
+	android:theme
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:14:9-40
+activity#com.dev.infogenda.controller.GerenciadorAvaliacoes
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:15:9-24:20
+	android:label
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:17:13-45
+	android:theme
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:18:13-44
+	android:name
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:16:13-78
+intent-filter#android.intent.action.MAIN+android.intent.category.default
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:20:25-66
+category#android.intent.category.default
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:22:17-76
+	android:name
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:22:27-73
+activity#com.dev.infogenda.controller.Splash
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:25:9-31:20
+	android:name
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:25:19-69
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:26:13-30:29
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:29:17-77
+	android:name
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:29:27-74
+receiver#com.dev.infogenda.notify.AlarmReceiver
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:33:9-75
+	android:name
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:33:19-72
+service#com.dev.infogenda.notify.RingTonePlayingService
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:35:9-37:38
+	android:enabled
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:37:13-35
+	android:name
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:36:13-75
+activity#com.dev.infogenda.controller.Configuracoes
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:39:9-79
+	android:name
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:39:19-76
+activity#com.dev.infogenda.controller.Inicio
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:40:9-72
+	android:name
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:40:19-69
+activity#com.dev.infogenda.controller.GerenciadorDisciplinas
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:41:9-88
+	android:name
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:41:19-85
+activity#com.dev.infogenda.controller.RegistrarDisciplina
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:42:9-85
+	android:name
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:42:19-82
+activity#com.dev.infogenda.controller.RegistrarAvaliacao
+ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:43:9-93
+	android:name
+		ADDED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml:43:19-81
+uses-sdk
+INJECTED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha7] C:\Users\Michael Martins\.android\build-cache\1db08d4f5e82e2d2d376a62f205c3c063e74f6ca\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\e8fd523fbdd85d6b52b1144fb7783e2756d28bf6\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\11e8559f4cfc9d75c56e22b9b40f7286329784b9\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\3e659c044c2898e507554b88e2af9fbe829f8942\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\027ec672d82c286e204ddd33c7dc1d306cb2158e\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\261e525bfc738466a228e131c966504f0060f9b0\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\29f35e5d40ecf5203a6be6e672cedcc1b59e94d6\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\5eeba67574961bae660ef69fc6bc3b1ab45ad605\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\b6ec18d8dbf06062730d2c4e849fa5a454af4467\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\88a85cdc96ddb2a18ee393727c3a92a99d69fc3a\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\e0917b590c472457aeeee65c893a37b794cdc8e4\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\bdc7f32b6032b1b5a40718297b4487fda6efad84\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\dfa1c1bdbe5c6150feba45fb64174b1993eaa472\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\e8fd523fbdd85d6b52b1144fb7783e2756d28bf6\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Michael Martins\Downloads\Temp4\Ghanta-master\Ghanta-master\Ghanta\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\e8fd523fbdd85d6b52b1144fb7783e2756d28bf6\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\11e8559f4cfc9d75c56e22b9b40f7286329784b9\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\3e659c044c2898e507554b88e2af9fbe829f8942\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\027ec672d82c286e204ddd33c7dc1d306cb2158e\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\261e525bfc738466a228e131c966504f0060f9b0\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\29f35e5d40ecf5203a6be6e672cedcc1b59e94d6\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\5eeba67574961bae660ef69fc6bc3b1ab45ad605\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\b6ec18d8dbf06062730d2c4e849fa5a454af4467\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\88a85cdc96ddb2a18ee393727c3a92a99d69fc3a\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\e0917b590c472457aeeee65c893a37b794cdc8e4\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\bdc7f32b6032b1b5a40718297b4487fda6efad84\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\dfa1c1bdbe5c6150feba45fb64174b1993eaa472\output\AndroidManifest.xml:25:5-27:41
+	android:value
+		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\e8fd523fbdd85d6b52b1144fb7783e2756d28bf6\output\AndroidManifest.xml:27:9-38
+	android:name
+		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\Michael Martins\.android\build-cache\e8fd523fbdd85d6b52b1144fb7783e2756d28bf6\output\AndroidManifest.xml:26:9-47

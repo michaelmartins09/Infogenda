@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.development.infogenda">
+    package="com.dev.infogenda">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -10,26 +13,34 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".controllers.Inicio"
-            android:windowSoftInputMode="stateHidden">
+            android:name="com.dev.infogenda.controller.GerenciadorAvaliacoes"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.default" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dev.infogenda.controller.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controllers.RegistrarAvaliacoes"
-            android:windowSoftInputMode="stateHidden">
-        </activity>
-        <activity android:name=".controllers.RegistrarDisciplinas"
-            android:windowSoftInputMode="stateHidden">
-        </activity>
-        <activity android:name=".controllers.GerenciarDisciplinas">
-        </activity>
-        <activity android:name=".controllers.Configuracoes">
-        </activity>
-        <activity android:name=".controllers.VisualizarAvaliacoes">
-        </activity>
+
+        <receiver android:name="com.dev.infogenda.notify.AlarmReceiver" />
+
+        <service
+            android:name="com.dev.infogenda.notify.RingTonePlayingService"
+            android:enabled="true" />
+
+        <activity android:name="com.dev.infogenda.controller.Configuracoes" />
+        <activity android:name="com.dev.infogenda.controller.Inicio" />
+        <activity android:name="com.dev.infogenda.controller.GerenciadorDisciplinas" />
+        <activity android:name="com.dev.infogenda.controller.RegistrarDisciplina" />
+        <activity android:name="com.dev.infogenda.controller.RegistrarAvaliacao"></activity>
     </application>
 
 </manifest>

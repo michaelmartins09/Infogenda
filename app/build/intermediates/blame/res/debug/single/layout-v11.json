@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\Michael Martins\\Downloads\\Temp4\\Ghanta-master\\Ghanta-master\\Ghanta\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
+        "source": "C:\\Users\\Michael Martins\\.android\\build-cache\\11e8559f4cfc9d75c56e22b9b40f7286329784b9\\output\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Martins\\Downloads\\Temp4\\Ghanta-master\\Ghanta-master\\Ghanta\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media.xml",
+        "source": "C:\\Users\\Michael Martins\\.android\\build-cache\\11e8559f4cfc9d75c56e22b9b40f7286329784b9\\output\\res\\layout-v11\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Martins\\Downloads\\Temp4\\Ghanta-master\\Ghanta-master\\Ghanta\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\Michael Martins\\.android\\build-cache\\11e8559f4cfc9d75c56e22b9b40f7286329784b9\\output\\res\\layout-v11\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Martins\\Downloads\\Temp4\\Ghanta-master\\Ghanta-master\\Ghanta\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\Michael Martins\\.android\\build-cache\\11e8559f4cfc9d75c56e22b9b40f7286329784b9\\output\\res\\layout-v11\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Martins\\Downloads\\Temp4\\Ghanta-master\\Ghanta-master\\Ghanta\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_action.xml",
+        "source": "C:\\Users\\Michael Martins\\.android\\build-cache\\11e8559f4cfc9d75c56e22b9b40f7286329784b9\\output\\res\\layout-v11\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Michael Martins\\Downloads\\Temp4\\Ghanta-master\\Ghanta-master\\Ghanta\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\Michael Martins\\.android\\build-cache\\11e8559f4cfc9d75c56e22b9b40f7286329784b9\\output\\res\\layout-v11\\notification_media_cancel_action.xml"
+    }
+]

@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Infogenda</string>
+    <string name="app_name">InfoGenda</string>
+    <string name="action_settings">Configurações</string>
+    <string name="action_gerenciar_disciplinas">Gerenciar Disciplinas</string>
     <string-array name="tempolembrete">
         <item>05 min</item>
         <item>10 min</item>

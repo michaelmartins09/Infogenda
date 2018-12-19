@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    android:orientation="vertical"
+    tools:context="com.dev.infogenda.controller.GerenciadorAvaliacoes">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnAddNovaAvaliacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_rectangle_radius"
+            android:drawableLeft="@drawable/ic_add_black_24dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:text="adicionar"
+            android:textColor="@color/colorWhite" />
+
+        <ListView
+            android:id="@+id/listAvaliacoes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#00ffffff"
+            android:dividerHeight="10dp"
+            android:padding="5dp" />
+    </LinearLayout>
+
+
+</LinearLayout>
