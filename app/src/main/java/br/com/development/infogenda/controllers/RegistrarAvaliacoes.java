@@ -161,7 +161,7 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
         btnSalvarAvaliacao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (validarCampos()){
+                if (validarCampos()) {
                     salvarAvaliacao();
                 }
             }
@@ -217,17 +217,17 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
         });
     }
 
-    private void prepararSpinner(){
+    private void prepararSpinner() {
         DatabaseController crud = new DatabaseController(getApplicationContext());
 
-        if (spnDisciplinas == null){
+        if (spnDisciplinas == null) {
             spnDisciplinas = (Spinner) findViewById(R.id.spnDisciplinas);
         }
 
         ArrayAdapter<Disciplina> arrayAdapter =
                 new ArrayAdapter<>(this,
-                R.layout.support_simple_spinner_dropdown_item,
-                crud.carregarDisciplinas());
+                        R.layout.support_simple_spinner_dropdown_item,
+                        crud.carregarDisciplinas());
         arrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         spnDisciplinas.setAdapter(arrayAdapter);
     }
@@ -241,47 +241,62 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
             etDescricaoAvaliacao.setError("Informe descrição da Avaliação");
             return false;
         }
-        if ( spnDisciplinas.getSelectedItem().toString().equals("") ) {
+        if (spnDisciplinas.getSelectedItem().toString().equals("")) {
             alerta("Selecione ou cadastre uma disciplina para continuar");
             return false;
         }
-        if (!rbtnTipoSonoro.isChecked() && !rbtnTipoMensagem.isChecked() && !rbtnTipoSonoro.isChecked()){
+        if (!rbtnTipoMensagem.isChecked() && !rbtnTipoMensagem.isChecked() && !rbtnTipoSonoro.isChecked()) {
             alerta("Selecione um tipo de alerta");
             return false;
         }
-        if (etDataAvaliacao.getText().toString().equals("")){
+        if (etDataAvaliacao.getText().toString().equals("")) {
             alerta("Escolha uma data para a notificação");
             return false;
         }
-        if (etHorarioAvaliacao.getText().toString().equals("")){
+        if (etHorarioAvaliacao.getText().toString().equals("")) {
             alerta("Escolha um  horário para a notificação");
             return false;
         }
         return true;
     }
 
-    private void salvarAvaliacao(){
+    private void salvarAvaliacao() {
         DatabaseController crud = new DatabaseController(getApplicationContext());
         String[] disciplina = spnDisciplinas.getSelectedItem().toString().split(" - ");
+        String tipoAlerta = "";
 
         int tempoNot = 0;
 
-        if (swtLembrete.isChecked()){
-            tempoNot = Integer.parseInt(etTempoLembrete.getSelectedItem().toString());
+        if (swtLembrete.isChecked()) {
+            String[] splitTemp = etTempoLembrete.getSelectedItem().toString().split(" ");
+            tempoNot = Integer.parseInt(splitTemp[0]);
+        }
+
+        switch (rgroupTipoNotificacao.getCheckedRadioButtonId()) {
+            case R.id.rbtnTipoLuminoso:
+                tipoAlerta = rbtnTipoLuminoso.getText().toString();
+                break;
+            case R.id.rbtnTipoMensagem:
+                tipoAlerta = rbtnTipoMensagem.getText().toString();
+                break;
+            case R.id.rbtnTipoSonoro:
+                tipoAlerta = rbtnTipoSonoro.getText().toString();
+                break;
         }
 
         Avaliacao aval = new Avaliacao(
-            etNomeAvaliacao.getText().toString(),
-            etDescricaoAvaliacao.getText().toString(),
+                etNomeAvaliacao.getText().toString(),
+                etDescricaoAvaliacao.getText().toString(),
                 crud.getDisciplina(disciplina[0]),
                 etDataAvaliacao.getText().toString(),
                 etHorarioAvaliacao.getText().toString(),
+                tipoAlerta,
                 tempoNot);
 
         String response = crud.inserirAvaliacao(aval);
-        if (response.contains("Erro")){
+        if (response.contains("Erro")) {
             alerta(response);
-        }else {
+        } else {
             finish();
         }
     }

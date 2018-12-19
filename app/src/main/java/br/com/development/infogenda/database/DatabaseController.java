@@ -33,11 +33,13 @@ public class DatabaseController {
         contentValues = new ContentValues();
         contentValues.put("nome", avaliacao.getNomeAvaliacao());
         contentValues.put("descricao", avaliacao.getDescricao());
-        contentValues.put("tipo_alerta", "sonoro");
-        contentValues.put("date", "01/01/2019");
-        contentValues.put("tempo_lembrete", 5);
+        contentValues.put("idDisciplina", avaliacao.getDisciplina().getIdDisciplina());
+        contentValues.put("dataNotificacao", avaliacao.getDataNotificacao());
+        contentValues.put("horarioNotificacao", avaliacao.getHorarioNotificacao());
+        contentValues.put("tipoalerta", avaliacao.getTipoAleta());
+        contentValues.put("tempolembrete", 5);
 
-        response = database.insert(this.bancocriado.getDatabaseName(), null, contentValues);
+        response = database.insert("avaliacao", null, contentValues);
         database.close();
 
         if (response == -1) {
@@ -116,26 +118,50 @@ public class DatabaseController {
         }
     }
 
-    public int getIdDisciplina(String nomeDisciplina){
-        int response = 0;
+    public Disciplina getDisciplina(String nomeDisciplina) {
+        Disciplina response = null;
+
         List<Disciplina> temp = carregarDisciplinas();
-        for (Disciplina nome: temp) {
-            if (nome.getNomeDisciplina().equals(nomeDisciplina)){
-                response = nome.getIdDisciplina();
+        for (Disciplina nome : temp) {
+            if (nome.getNomeDisciplina().equals(nomeDisciplina)) {
+                response = nome;
             }
         }
         return response;
     }
 
-    public Disciplina getDisciplina(String nomeDisciplina){
+    public Disciplina getDisciplinaById(String idDisciplina) {
         Disciplina response = null;
 
         List<Disciplina> temp = carregarDisciplinas();
-        for (Disciplina nome: temp) {
-            if (nome.getNomeDisciplina().equals(nomeDisciplina)){
+        for (Disciplina nome : temp) {
+            if (nome.getNomeDisciplina().equals(idDisciplina)) {
                 response = nome;
             }
         }
         return response;
+    }
+
+    public List<Avaliacao> carregarAvaliacoes() {
+        List<Avaliacao> listAvaliacoes = new ArrayList<>();
+        Cursor cursor = cursorConsulta("avaliacao");
+
+        cursor.moveToFirst();
+
+        while (cursor.moveToNext() && !cursor.isNull(cursor.getColumnIndex("nomeAvaliacao"))) {
+            listAvaliacoes.add(
+                    new Avaliacao(
+                            cursor.getInt(1),
+                            cursor.getString(cursor.getColumnIndex("nome")),
+                            cursor.getString(cursor.getColumnIndex("descricao")),
+                            getDisciplinaById(cursor.getString(cursor.getColumnIndex("idDisciplina"))),
+                            cursor.getString(cursor.getColumnIndex("datanotificacao")),
+                            cursor.getString(cursor.getColumnIndex("horarioNotificacao")),
+                            cursor.getString(cursor.getColumnIndex("tipoalerta")),
+                            cursor.getInt(cursor.getColumnIndex("tempolembrete"))));
+            cursor.moveToNext();
+        }
+        database.close();
+        return listAvaliacoes;
     }
 }

@@ -29,18 +29,18 @@ public class Configuracoes extends AppCompatActivity {
     }
 
     private void eventClick() {
-        btnConfigLimparDisciplinas.setOnClickListener(new View.OnClickListener() {
+        btnConfigLimparAvaliacoes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog alertDialog = new AlertDialog.Builder(Configuracoes.this).create();
-                alertDialog.setTitle("Limpar Disciplinas");
+                alertDialog.setTitle("Limpar Avaliações");
                 alertDialog.setMessage("Deseja realmente realizar esta operação?");
                 alertDialog.setCancelable(false);
                 alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "SIM", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         DatabaseController crud = new DatabaseController(getApplicationContext());
-                        String response = crud.limparTabela("disciplina");
+                        String response = crud.limparTabela("avaliacao");
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
                     }
                 });
@@ -53,7 +53,6 @@ public class Configuracoes extends AppCompatActivity {
                 alertDialog.show();
             }
         });
-
 
     }
 

@@ -9,24 +9,26 @@ public class Avaliacao {
     private Disciplina disciplina;
     private String dataNotificacao;
     private String horarioNotificacao;
+    private String tipoAleta;
     private int tempLembrete;
 
-    public Avaliacao(int idAvaliacao, String nomeAvaliacao, String descricao, Disciplina disciplina, String dataNotificacao, String horarioNotificacao, int tempLembrete) {
+    public Avaliacao(int idAvaliacao, String nomeAvaliacao, String descricao, Disciplina disciplina, String dataNotificacao, String horarioNotificacao, String tipoAleta, int tempLembrete) {
         this.idAvaliacao = idAvaliacao;
         this.nomeAvaliacao = nomeAvaliacao;
         this.descricao = descricao;
         this.disciplina = disciplina;
         this.dataNotificacao = dataNotificacao;
         this.horarioNotificacao = horarioNotificacao;
+        this.tipoAleta = tipoAleta;
         this.tempLembrete = tempLembrete;
     }
-
-    public Avaliacao(String nomeAvaliacao, String descricao, Disciplina disciplina, String dataNotificacao, String horarioNotificacao, int tempLembrete) {
+    public Avaliacao(String nomeAvaliacao, String descricao, Disciplina disciplina, String dataNotificacao, String horarioNotificacao, String tipoAleta, int tempLembrete) {
         this.nomeAvaliacao = nomeAvaliacao;
         this.descricao = descricao;
         this.disciplina = disciplina;
         this.dataNotificacao = dataNotificacao;
         this.horarioNotificacao = horarioNotificacao;
+        this.tipoAleta = tipoAleta;
         this.tempLembrete = tempLembrete;
     }
 
@@ -76,6 +78,14 @@ public class Avaliacao {
 
     public void setHorarioNotificacao(String horarioNotificacao) {
         this.horarioNotificacao = horarioNotificacao;
+    }
+
+    public String getTipoAleta() {
+        return tipoAleta;
+    }
+
+    public void setTipoAleta(String tipoAleta) {
+        this.tipoAleta = tipoAleta;
     }
 
     public int getTempLembrete() {
