@@ -39,6 +39,8 @@ public class DatabaseController {
         contentValues.put("tempolembrete", 5);
 
         response = database.insert("avaliacao", null, contentValues);
+        //Log.i("DEBUG/DATABASE", String.valueOf(contentValues));
+        //Log.i("DEBUG/DATABASE", String.valueOf(response));
         database.close();
 
         if (response == -1) {
@@ -87,16 +89,18 @@ public class DatabaseController {
         List<Disciplina> listDisciplinas = new ArrayList<>();
         Cursor cursor = cursorConsulta("disciplina");
 
-        cursor.moveToFirst();
 
-        while (cursor.moveToNext() && !cursor.isNull(cursor.getColumnIndex("nomeDisciplina"))) {
-            listDisciplinas.add(
-                    new Disciplina(
-                            cursor.getInt(1),
-                            cursor.getString(cursor.getColumnIndex("nomeDisciplina")),
-                            cursor.getString(cursor.getColumnIndex("nomeProfessor")),
-                            cursor.getString(cursor.getColumnIndex("infor_sala"))));
-            cursor.moveToNext();
+        if (cursor.moveToFirst()) {
+            do {
+                //int idDisciplina, String nomeDisciplina, String nomeProfessor, String infoSala
+                Disciplina disciplinaList = new Disciplina(null, null, null);
+                disciplinaList.setIdDisciplina(cursor.getInt(0));
+                disciplinaList.setNomeDisciplina(cursor.getString(cursor.getColumnIndex("nomeDisciplina")));
+                disciplinaList.setNomeProfessor(cursor.getString(cursor.getColumnIndex("nomeProfessor")));
+                disciplinaList.setInfoSala(cursor.getString(cursor.getColumnIndex("infor_sala")));
+
+                listDisciplinas.add(disciplinaList);
+            } while (cursor.moveToNext());
         }
         database.close();
         return listDisciplinas;
@@ -145,20 +149,23 @@ public class DatabaseController {
         List<Avaliacao> listAvaliacoes = new ArrayList<>();
         Cursor cursor = cursorConsulta("avaliacao");
 
-        cursor.moveToFirst();
 
-        while (cursor.moveToNext() && !cursor.isNull(cursor.getColumnIndex("nome"))) {
-            listAvaliacoes.add(
-                    new Avaliacao(
-                            cursor.getInt(1),
-                            cursor.getString(cursor.getColumnIndex("nome")),
-                            cursor.getString(cursor.getColumnIndex("descricao")),
-                            getDisciplinaById(cursor.getString(cursor.getColumnIndex("idDisciplina"))),
-                            cursor.getString(cursor.getColumnIndex("dataNotificacao")),
-                            cursor.getString(cursor.getColumnIndex("horarioNotificacao")),
-                            cursor.getString(cursor.getColumnIndex("tipoalerta")),
-                            cursor.getInt(cursor.getColumnIndex("tempolembrete"))));
-            cursor.moveToNext();
+        if (cursor.moveToFirst()) {
+            do {
+                Avaliacao avaliacaoList =
+                        new Avaliacao(0, null, null, null, null, null, null, 0);
+
+                avaliacaoList.setIdAvaliacao(cursor.getInt(1));
+                avaliacaoList.setNomeAvaliacao(cursor.getString(cursor.getColumnIndex("nome")));
+                avaliacaoList.setDescricao(cursor.getString(cursor.getColumnIndex("descricao")));
+                avaliacaoList.setDisciplina(getDisciplinaById(cursor.getString(cursor.getColumnIndex("idDisciplina"))));
+                avaliacaoList.setDataNotificacao(cursor.getString(cursor.getColumnIndex("dataNotificacao")));
+                avaliacaoList.setHorarioNotificacao(cursor.getString(cursor.getColumnIndex("horarioNotificacao")));
+                avaliacaoList.setTipoalerta(cursor.getString(cursor.getColumnIndex("tipoalerta")));
+                avaliacaoList.setTempLembrete(cursor.getInt(cursor.getColumnIndex("tempolembrete")));
+
+                listAvaliacoes.add(avaliacaoList);
+            } while (cursor.moveToNext());
         }
         database.close();
         return listAvaliacoes;

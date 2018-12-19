@@ -245,7 +245,7 @@ public class RegistrarAvaliacoes extends AppCompatActivity {
             alerta("Selecione ou cadastre uma disciplina para continuar");
             return false;
         }
-        if (!rbtnTipoMensagem.isChecked() && !rbtnTipoMensagem.isChecked() && !rbtnTipoSonoro.isChecked()) {
+        if (!rbtnTipoMensagem.isChecked() && !rbtnTipoLuminoso.isChecked() && !rbtnTipoSonoro.isChecked()) {
             alerta("Selecione um tipo de alerta");
             return false;
         }

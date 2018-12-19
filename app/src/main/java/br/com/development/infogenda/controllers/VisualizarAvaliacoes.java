@@ -42,7 +42,8 @@ public class VisualizarAvaliacoes extends AppCompatActivity {
     private void carregarListObject() {
         DatabaseController crud = new DatabaseController(getApplicationContext());
         listAvaliacoes = crud.carregarAvaliacoes();
-        if (listAvaliacoes != null && listAvaliacoes.size() >= 1) {
+        if (listAvaliacoes.size() > 0) {
+        //if (listAvaliacoes != null && listAvaliacoes.size() >= 0) {
             listViewAvaliacoes.setVisibility(View.VISIBLE);
             statusListAvaliacao.setVisibility(View.GONE);
             AdapterVisualizarAvaliacoes cad = new AdapterVisualizarAvaliacoes(listAvaliacoes, this);
